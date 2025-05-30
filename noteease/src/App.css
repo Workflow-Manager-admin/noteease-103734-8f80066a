@@ -1,9 +1,36 @@
 :root {
   --kavia-orange: #E87A41;
+  --primary: #4A90E2;
+  --secondary: #FFFFFF;
+  --accent: #F5A623;
   --kavia-dark: #1A1A1A;
+  --kavia-light: #f2f5fa;
+  --glass-bg: rgba(255,255,255,0.10);
+  --glass-blur: 20px;
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.13);
+  --fab-shadow: 0 6px 24px rgba(74,144,226,.23), 0 1.5px 4px rgba(0,0,0,0.08);  
+}
+
+/* Light theme */
+.light {
+  --glass-bg: rgba(255,255,255,0.70);
+  --glass-blur: 15px;
+  --text-color: #181C24;
+  --text-secondary: #3d3d3d;
+  --border-color: rgba(30,30,30,0.08);
+  --background-main: #f2f5fa;
+}
+
+/* Dark theme */
+.dark {
+  --glass-bg: rgba(32,40,54,0.48);
+  --glass-blur: 20px;
+  --text-color: #fff;
+  --text-secondary: rgba(255,255,255,0.7);
+  --border-color: rgba(255,255,255,0.10);
+  --background-main: #141925;
 }
 
 body {
