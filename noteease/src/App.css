@@ -36,10 +36,83 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--kavia-dark);
+  background-color: var(--background-main, var(--kavia-dark));
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.glassy-container {
+  margin: 100px auto 0 auto;
+  max-width: 680px;
+  background: var(--glass-bg);
+  border-radius: 22px;
+  box-shadow: 0 8px 36px 0 rgba(43,86,142,.08), 0 1.5px 4px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1.5px solid var(--border-color);
+  padding: 40px 28px 64px 28px;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+  min-height: 370px;
+  z-index: 2;
+}
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  right: 36px;
+  bottom: 48px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--secondary);
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 2rem;
+  box-shadow: var(--fab-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  z-index: 99;
+  transition: background .18s, box-shadow .18s;
+}
+.fab:active, .fab:focus {
+  box-shadow: 0 0 0 3px var(--accent);
+}
+.fab:hover {
+  filter: brightness(.92);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.32rem;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: color .18s;
+}
+.theme-toggle:focus {
+  color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(80,100,180, 0.07);
+  border-radius: 22px;
 }
 
 .app {
